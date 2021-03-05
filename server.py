@@ -32,7 +32,7 @@ while True:
         with open(addr[0]+"/"+addr[0]+".txt", "w") as f:
             f.write("DIRECTORY CREATED - {0}".format(datetime.now().strftime("%m/%d/%Y-%H:%M:%S")))
     finally:
-        with open(addr[0]+"/"+"{0}.txt".format(datetime.now().strftime("%m/%d/%Y-%H:%M:%S")), "w") as f:
+        with open(addr[0]+"/"+"{0}.txt".format(datetime.now().strftime("%m-%d-%Y_%H-%M-%S")), "w") as f:
             f.write(data)
     conn.close()
     print("[...] Closed connection from:", addr)
