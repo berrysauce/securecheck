@@ -25,12 +25,12 @@ while True:
     print(data)
     print("--------------------  [END OF TRANSMISSION]  --------------------")
     try:
-        with open(addr[0]+"/"+addr[0], "r") as f:
+        with open(addr[0]+"/"+addr[0]+".txt", "r") as f:
             f.read()
     except IOError:
         os.mkdir(addr[0])
-        with open(addr[0]+"/"+addr[0], "w") as f:
-            f.write(addr)
+        with open(addr[0]+"/"+addr[0]+".txt", "w") as f:
+            f.write("DIRECTORY CREATED - {0}".format(datetime.now().strftime("%m/%d/%Y-%H:%M:%S")))
     finally:
         with open(addr[0]+"/"+"{0}.txt".format(datetime.now().strftime("%m/%d/%Y-%H:%M:%S")), "w") as f:
             f.write(data)
