@@ -1,4 +1,5 @@
 import socket
+import datetime
 
 sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
@@ -23,5 +24,7 @@ while True:
 
     print(data)
     print("--------------------  [END OF TRANSMISSION]  --------------------")
+    with open("{}.txt".format(datetime.datetime.now()), "w") as myfile:
+        myfile.write(data)
     conn.close()
     print("[...] Closed connection from:", addr)
