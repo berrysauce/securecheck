@@ -4,8 +4,7 @@ import datetime
 sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 # host = "localhost"
-host_name = socket.gethostname()
-host_ip = socket.gethostbyname(host_name)
+host_ip = "149.28.63.177"
 host_port = 15420
 print("Hostname :  ",host_name)
 print("IP : ",host_ip)
