@@ -19,7 +19,7 @@ while True:
     print("[...] Transmission received from:", addr)
     print("-------------------- [START OF TRANSMISSION] --------------------")
 
-    bytedata = conn.recv(1024)
+    bytedata = conn.recv(10240)
     data = bytedata.decode()
 
     print(data)
