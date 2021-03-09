@@ -5,7 +5,7 @@ import os
 sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 # host = "localhost"
-host_ip = "149.28.63.177"
+host_ip = "149.28.55.11"
 host_port = 15420
 print("IP :  ",host_ip)
 print("Port : ",host_port)
